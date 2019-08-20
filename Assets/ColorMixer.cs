@@ -49,6 +49,7 @@ public class ColorMixer : MonoBehaviour
                 secondBallColorIndex = secondBall.GetComponent<PhysicsBall>().colorIndex;
                 mixColorIndex = MyClass.colorMixTable[firstBallColorIndex, secondBallColorIndex];
                 Destroy(secondBall);
+
                 firstBall.GetComponent<PhysicsBall>().colorIndex = mixColorIndex;
                 firstBall.GetComponent<SpriteRenderer>().color = Resources.Load<SpriteRenderer>("Prefab/PhysicsBall" + mixColorIndex).color;
 
